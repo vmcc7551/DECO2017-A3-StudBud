@@ -5,7 +5,7 @@ var longBreakTime = document.getElementById("longBreakTime").value;
 var repeating = document.getElementById("repeating").value;
 
 var seconds = 00;
-var minutes = workingTime;
+var minutes = 00;
 var hours = 00;
 
 var appendSeconds = document.getElementById('seconds');
@@ -67,14 +67,7 @@ function startStopwatch() {
     buttonReset.onclick = function (){
         clearInterval(interval)
         seconds = "00";  
-        if (shortBreakTime <= 9) {
-          minutes = "0" + shortBreakTime;
-        }
-
-      if (shortBreakTime > 9) {
-          minutes = shortBreakTime;
-        }
-      
+        minutes = "00";
         hours = "00";
         
         appendSeconds.innerHTML = seconds;
@@ -85,7 +78,7 @@ function startStopwatch() {
 //Pomodoro Timer Settings
 
 //Looking at the different time variables and how they will interact with eachother
-function startPomoTimer() {
+/*function startPomoTimer() {
     
   seconds--
 
@@ -139,15 +132,15 @@ if ((seconds == -1) && (minutes > 0)){
         appendHours.innerHTML = hours;
   }
 
-}
+}*/
 
-//
-buttonStartPomo.onclick = function() {
+
+/*buttonStartPomo.onclick = function() {
         if(interval) {
             clearInterval(interval);}
 
         interval = setInterval(startPomoTimer, 10); 
-    }
+    }*/
 
 /*setPomoTime.onclick = function () {
         clearInterval(interval)
@@ -166,7 +159,7 @@ buttonStartPomo.onclick = function() {
 
 
 
-setPomoTime.onclick = function () {
+/*setPomoTime.onclick = function () {
   clearInterval(interval)
 
   for (let i = 0; i < repeating.length; i++) {
@@ -195,7 +188,7 @@ setPomoTime.onclick = function () {
       break;
     }
   }
-}
+}*/
 
 /*function pollDOM () {
   const el = document.querySelector('my-element');
@@ -207,4 +200,4 @@ setPomoTime.onclick = function () {
   }
 }
 
-pollDOM();*/
+pollDOM();*/ 
