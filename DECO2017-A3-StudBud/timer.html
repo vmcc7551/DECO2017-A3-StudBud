@@ -35,12 +35,15 @@
     <img class="timer" src="Images/PlaceHolder.png" alt="Timer Icon">
 
     
-    <h3 class="timer">00:00:00</h3>
+    <h3 class="timer"><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span></h3>
   
     <div class=timerButtons>
-      <button id="timerReset">Reset</button>
       
-      <button id="timerStart">Start</button>
+      <button id="button-start">Start</button>
+      <button id="button-stop">Stop</button>
+      <button id="button-reset">Reset</button>
+      
+      
     </div>
   </div>
   <!--Settings-->
@@ -48,6 +51,9 @@
   <!--Footer-->
   <div class="footer">
     <p class="footer"><strong>StudBud</strong> </br> ©  2022 DesCo - All Rights Reserved.</p>
-    </div>
-  
-</body>
+  </div>
+
+  <script src="timer.js"></script>
+
+  </body>
+</html>

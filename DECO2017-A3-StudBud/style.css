@@ -468,7 +468,7 @@ div.timerButtons {
   text-align: center;
 }
 
-#timerReset {
+#button-reset {
 
   font-size: 30px;
   
@@ -480,7 +480,14 @@ div.timerButtons {
   color: #F7EBEC;
 }
 
-#timerStart {
+#button-reset:hover {
+
+  color: #eadbdc;
+  background-color: #9789a8;
+
+}
+
+#button-start, #button-stop {
   
   font-size: 30px;
   
@@ -490,6 +497,14 @@ div.timerButtons {
   color: #59656F;
   
 }
+
+#button-start:hover, #button-stop:hover {
+
+  background-color: #d3b0ca;
+  color: #45515a;
+
+}
+
 
 
 /*ALL DICTIONARY SPECIFIC CODE*/
