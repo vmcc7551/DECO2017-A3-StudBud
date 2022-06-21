@@ -373,6 +373,7 @@ label span {
 
   color: white;
 
+
 }
 
 p#dueDate1 {
@@ -558,6 +559,21 @@ li.wordSynonym {
 
   display: inline;
   
+}
+
+/*ALL MUSIC PLAYER SPECIFIC CODE*/
+/*div.musicPlayer {
+  height: 80%;
+}*/
+
+div#musicSelectionArea {
+
+  margin: 3% auto;
+
+  width: 90%;
+  height: 65%;
+
+  background-color: #576570;
 }
 
 
