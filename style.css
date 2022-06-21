@@ -36,7 +36,7 @@ h2 {
   font-weight: 700;
   font-style: italic;
 
-  color: #AC9FBB; purple
+  color: #AC9FBB;
 }
 
 h3 {
@@ -372,7 +372,7 @@ label span {
   content: '\2713';
 
   color: white;
-  background-colour: #f9eaec;
+
 
 }
 
@@ -561,9 +561,20 @@ li.wordSynonym {
   
 }
 
-font-family: 'Merriweather', serif;
+/*ALL MUSIC PLAYER SPECIFIC CODE*/
+/*div.musicPlayer {
+  height: 80%;
+}*/
 
+div#musicSelectionArea {
 
+  margin: 3% auto;
+
+  width: 90%;
+  height: 65%;
+
+  background-color: #576570;
+}
 
 
 /*RESPONSIVE SCREEN SIZES*/
@@ -614,7 +625,7 @@ font-family: 'Merriweather', serif;
   
   h1.section1 {
     
-  }
+  }*/
 }
 
 
@@ -663,4 +674,5 @@ color: #1D1E2C; navy blue
 FONTS
 font-family: 'Jost', sans-serif;
 font-family: 'Merriweather', serif;
-*/
+*/ 
+}
