@@ -15,6 +15,9 @@
   <body>
 
     <!-- All code for the General Task Screen-->
+    <ul id="tasklist">
+    </ul>
+
     <button class="show">Add a New Task</button>
 
       
@@ -48,20 +51,24 @@
         <!-- Priority -->
         <br>
     
-        <label for="priority" id="priorityLabel">Task Priority:</label>
-        <select name="prority" id="priorityInput">
-          <option value="N/A">N/A</option>
-          <option value="Low">Low</option>
-          <option value="Medium">Medium</option>
-          <option value="High">High</option>
+        <label for="urgency" id="urgencyLabel">Task Urgency:</label>
+        <select name="urgency" id="urgencyInput">
+          <option value="Urgent">Urgent</option>
+          <option value="NotUrgent">Not Urgent</option>
+        </select>
+    
+        <br>
+
+        <label for="importance" id="importanceLabel">Task Importance:</label>
+        <select name="importance" id="importanceInput">
+          <option value="Important">Important</option>
+          <option value="NotImportant">Not Important</option>
         </select>
     
         <br>
   
         <button type="submit" id="taskSubmitButton">Submit</button>
       </form>
-      <ul id="tasklist">
-      </ul>
 
     </div>
 

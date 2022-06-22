@@ -93,6 +93,13 @@ h4 {
   
   /* ALL NEW CHANGES BELOW*/
 
+  /* Settings for general Task Manager webpage */
+
+.newElement {
+    color: #ae5c99;
+}
+
+  /* Settings for 'Create a New Task' window */
 .settings {
     position: fixed;
     left: 0;
