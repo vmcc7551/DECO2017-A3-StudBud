@@ -1,102 +1,83 @@
-//const content = document.getElementById("information")
-
-/*var request = new XMLHttpRequest();
-
-request.open("GET", "https://dictionaryapi.com/api/v3/references/collegiate/json/word?key=219d39cd-322c-470f-b482-a7c9cb021cee");
-
-    request.onload = function(){
-      if (request.status >= 200 && request.status < 400) {
-
-        let def = JSON.parse(this.response);
-        //console.log(word);
-
-        def.forEach(function(definition) {
-          renderDefinition(definition);
-          //console.log(definition);
-
-          function renderDefinition(definition) {
-          //console.log(definition.shortdef[0]);
-          }
-        });
-      }
-    }*/
-
-//Get elements from document    
 var word = document.getElementById("word");
-
 var wordDefinitionList = document.getElementById("wordDefinitionList");
-//var userWordSearch = document.getElementById("textInput").value;
 
+//Collecting Data from the API for the Dictionary
+var requestDictionary = new XMLHttpRequest();
+requestDictionary.withCredentials = true;
 
-//Collecting Data from the API
-var request = new XMLHttpRequest();
-request.withCredentials = true;
-
-request.addEventListener("readystatechange", function () {
+requestDictionary.addEventListener("readystatechange", function () {
 	if (this.readyState === this.DONE) {
-		//console.log(this.responseText);
 	}
 });
 
-request.open("GET", "https://wordsapiv1.p.rapidapi.com/words/angry/definitions");
-request.setRequestHeader("X-RapidAPI-Key", "2e4ba87828mshb405566e51db918p10f940jsncc9b1d992d28");
-request.setRequestHeader("X-RapidAPI-Host", "wordsapiv1.p.rapidapi.com");
+//Finding and running the API
+requestDictionary.open("GET", "https://wordsapiv1.p.rapidapi.com/words/angry/definitions");
+requestDictionary.setRequestHeader("X-RapidAPI-Key", "2e4ba87828mshb405566e51db918p10f940jsncc9b1d992d28");
+requestDictionary.setRequestHeader("X-RapidAPI-Host", "wordsapiv1.p.rapidapi.com");
 
-request.onload = function() {
+requestDictionary.onload = function() {
 
-  if (request.status >=200 && request.status <400) {
+  //turning object into string
+  if (requestDictionary.status >=200 && requestDictionary.status <400) {
+
     let data = JSON.parse(this.response);
     
     let dataDefinitions = data.definitions;
 
-    //console.log(dataDefinitions[1]);
-    //wordDefinitionList.innerHTML = Object.values(data.definitions);
-    //data.forEach(function(def));
-
+    //getting each definition, to then add to a list
     for (let i = 0; i < dataDefinitions.length; i++) {
       
-      console.log(dataDefinitions[i].definition);
+      //console.log(dataDefinitions[i].definition);
 
       let singleDefinition = document.createElement("li");
-
       singleDefinition.innerHTML = dataDefinitions[i].definition;
 
-      //let singleDefinition = document.createElement("p");
-      //singleDefinition.innerHTML = dataDefinitions[i].definition;
-      //wordDefinitionList.innerHTML = (JSON.stringify(dataDefinitions[i]));
-      //dataDefinitionsString[i] = ;
-      //console.log(dataDefinitionsString);
-
-      //wordDefinitionListString = JSON.stringify(dataDefinitions);
-
-      //wordDefinitionList.innerHTML = wordDefinitionListString;
-      //wordDefinitionList.innerHTML = wordDefinitionListString.value.replace(/[\])}[{(]/g, '');
-
       wordDefinitionList.appendChild(singleDefinition);
-//
     }
-
-
-    
-    //data.forEach(function(def) {
-      //renderDefinition();
-
-      //wordDefinitionList.innerHTML = data.definitions.definitions;
-    //})
-  }
-
-  else { 
-    console.log("API ERROR");
   }
   
 }
 
+requestDictionary.send();
 
 
-request.send();
+var wordSynonymList = document.getElementById("wordSynonymList");
+//Collecting Data from the API for the Synonymns
+var requestSynonym = new XMLHttpRequest();
+requestSynonym.withCredentials = true;
 
-//function renderDefinition(def) {
-  //console.log(def.definition);
+requestSynonym.addEventListener("readystatechange", function () {
+	if (this.readyState === this.DONE) {
+	}
+});
 
+//Finding and running the API
+requestSynonym.open("GET", "https://wordsapiv1.p.rapidapi.com/words/angry/synonyms");
+requestSynonym.setRequestHeader("X-RapidAPI-Key", "2e4ba87828mshb405566e51db918p10f940jsncc9b1d992d28");
+requestSynonym.setRequestHeader("X-RapidAPI-Host", "wordsapiv1.p.rapidapi.com");
+
+requestSynonym.onload = function() {
+
+  //turning object into string
+  if (requestSynonym.status >=200 && requestSynonym.status <400) {
+
+    let data2 = JSON.parse(this.response);
+    console.log(data2.synonyms);
+    
+    let dataSynonyms = data2.synonyms;
+
+    //getting each definition, to then add to a list
+    for (let i = 0; i < dataSynonyms.length; i++) {
+      
+      console.log(dataSynonyms[i]);
+
+      let singleSynonym = document.createElement("li");
+      singleSynonym.innerHTML = dataSynonyms[i];
+
+      wordSynonymList.appendChild(singleSynonym);
+    }
+  }
   
-//}
+}
+
+requestSynonym.send();
