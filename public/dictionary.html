@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>StudBud | Dictionary</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,500;0,700;1,500&family=Merriweather:ital,wght@0,400;1,400;1,700&display=swap" rel="stylesheet">
+
+<body>
+
+  <!--Navigation Bar-->
+  <ul class="nav">
+    <li class="leftNav"><a href='index.html'> StudBud </a></li>
+    <li><a href='task_manager.html'> <img class="iconNav" src="Images/PlaceHolder.png" alt="Task Manager Icon"> <p>Task Manager</p> </a></li>
+    <li><a href='timer.html'> <img class="iconNav" src="Images/PlaceHolder.png" alt="Timer Icon"> <p>Timer</p> </a></li>
+    <li><a href='dictionary.html'> <img class="iconNav" src="Images/PlaceHolder.png" alt="Dictionary Icon"> <p>Dictionary</p> </a></li>
+    <li><a href='music_player.html'> <img class="iconNav" src="Images/PlaceHolder.png" alt="Music Player Icon"> <p>Music Player</p> </a></li>
+  </ul>
+
+
+
+
+  <!--Top Heading-->
+  <div class="dictionary">
+    <h1 class="dictionary">Dictionary</h1>
+
+    <h2>Need a synonym? Don't know what something means? Search for it!</h2>
+
+    <input type="search" id="searchWord" placeholder="Type your word here">
+  
+
+    <!--The information based on the search results-->
+    <div id="information">
+      
+      <h4 id="word">Word</h4>
+      
+      <div id="detailedInformation">
+        
+        <h5 id="wordDefinitionTitle">Definition</h5>
+
+        <p id="wordDefintion">a single distinct meaningful element of speech or writing, used with others (or sometimes alone) to form a sentence and typically shown with a space on either side when written or printed.</p>
+      
+        <h5 id="wordSynonymsTitle">Synonyms</h5>
+      
+        <ul id="wordSynonyms">
+          <li class="wordSynonym">phrase</li>
+          <li class="wordSynonym">express</li>
+          <li class="wordSynonym">put</li>
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--Footer-->
+  <div class="footer">
+    <p class="footer"><strong>StudBud</strong> </br> ©  2022 DesCo - All Rights Reserved.</p>
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>

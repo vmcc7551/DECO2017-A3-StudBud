@@ -1,0 +1,40 @@
+html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: #f7ede2;
+  }
+  .container {
+      width:90%;
+      text-align: center;
+      margin: 10%;
+  }
+  h2 {
+      font-family: Helvetica, sans-serif;
+      font-weight: bold;
+      color: #fb5607; 
+       -webkit-text-stroke: 1px black;
+      font-size: 2rem;
+  }
+  #seconds, #minutes, #hours {
+      font-family: Helvetica, sans-serif;
+      font-size: 2.2rem;
+  }
+  button {
+      width: 150px;
+      height: 50px;
+      background: white;
+      border-radius: 20px;
+      margin: 10px;
+      outline: none;
+      font-family: Helvetica, sans-serif;
+      font-size: 1.1rem;
+      background-color: #a8dadc;
+  }
+  button:hover{
+      opacity: 0.7;
+      font-weight: bold;
+  
+  }
