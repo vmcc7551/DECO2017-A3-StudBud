@@ -1,0 +1,33 @@
+{
+  "name": "node-server",
+  "version": "1.0.0",
+  "description": "Basic server using Node.js & Express.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmcc7551/DECO2017-A3-StudBud.git"
+  },
+  "keywords": [
+    "node",
+    "server",
+    "HTTP"
+  ],
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+
+
+  "author": "vmcc7551",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vmcc7551/DECO2017-A3-StudBud/issues"
+  },
+  "homepage": "https://github.com/vmcc7551/DECO2017-A3-StudBud#readme"
+
+
+  
+}
