@@ -5,42 +5,57 @@
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
     <link href="taskManager2.css" rel="stylesheet" type="text/css" />
+
+    <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,500;0,700;1,500&family=Merriweather:ital,wght@0,400;1,400;1,700&display=swap" rel="stylesheet">
   </head>
+
   <body>
-    <form id="taskform">
-      <label for="task">Task:</label>
-      <input type="text" name="task" id="taskInput">
 
+    <div id="addTaskPopUp">
+
+      <h4 id="createTaskTitle">Create a New Task</h4>
+
+      <form id="taskform">
+        <label for="task" id="taskLabel">Task:</label>
+        <input type="text" name="task" id="taskInput">
+  
+        <br>
+      <!-- Date input -->
+        <label for="dueDate" id="dueDateLabel">Due Date: </label>
+        <input type="date" name="dueDate" id="dueDateInput">
+        <br>
+      <!-- Time input -->
+      <label for="completionTime" id="completionTimeLabel">Completion Time: </label>
+        <input type="time" name="completionTime" id="completionTimeInput">
+  
+        <br>
+  
+      <label for="estimatedTime" id="estimatedTimeLabel">Estimated Time to Complete:</label>
+      <input type="number" name="estimatedTime" id="estimatedTimeInput" min="1">
+      <label for="estimatedTime">mins</label>
+      <!-- Priority -->
       <br>
-    <!-- Date input -->
-      <label for="dueDate">Due Date: </label>
-      <input type="date" name="dueDate" id="dueDateInput">
+  
+      <label for="priority" id="priorityLabel">Task Priority:</label>
+      <select name="prority" id="priorityInput">
+        <option value="N/A">N/A</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+  
       <br>
-    <!-- Time input -->
-    <label for="completionTime">Completion Time: </label>
-      <input type="time" name="completionTime" id="completionTimeInput">
+  
+        <button type="submit" id="taskSubmitButton">Submit</button>
+      </form>
+      <ul id="tasklist">
+      </ul>
 
-      <br>
-
-    <label for="estimatedTime">Estimated completion time (in mins):</label>
-    <input type="number" name="estimatedTime" id="estimatedTimeInput">
-    <!-- Priority -->
-    <br>
-
-    <label for="priority">Task Priority:</label>
-    <select name="prority" id="priorityInput">
-      <option value="None">None</option>
-      <option value="Low">Low</option>
-      <option value="Medium">Medium</option>
-      <option value="High">High</option>
-    </select>
-
-    <br>
-
-      <button type="submit">Submit</button>
-    </form>
-    <ul id="tasklist">
-    </ul>
+    </div>
+    
     <!-- <script src="script.js"></script> -->
     <!-- Swap the scripts to see the working solution -->
     <script src="taskManager2.js"></script>

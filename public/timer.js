@@ -5,7 +5,7 @@ var longBreakTime = document.getElementById("longBreakTime").value;
 var repeating = document.getElementById("repeating").value;
 
 var seconds = 00;
-var minutes = 00;
+var minutes = 10;
 var hours = 00;
 
 var appendSeconds = document.getElementById('seconds');
@@ -57,7 +57,7 @@ function startStopwatch() {
         if(interval) {
             clearInterval(interval);}
 
-        interval = setInterval(startStopwatch, 1000); 
+        interval = setInterval(startStopwatch, 10); 
     }
    
     buttonStop.onclick = function(){

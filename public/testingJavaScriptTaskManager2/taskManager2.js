@@ -14,7 +14,7 @@ const priorityInput = document.getElementById("priorityInput");
 button.addEventListener("click", function(event) {
   event.preventDefault(); // Not as necessary for button, but needed for form submit
 
-
+//Getting all value inputs
   let task = taskInput.value;
 
   let due = dueDateInput.value;
@@ -37,14 +37,13 @@ button.addEventListener("click", function(event) {
 // Create an empty array to store our tasks
 var taskList = [];
 
-function addTask(taskDescription, dueDate, completionTime, estimatedTime, priorityRating, completionStatus) {
+function addTask(taskDescription, dueDate, completionTime, estimatedTime, priorityRating) {
   let task = {
     taskDescription,
     dueDate,
     completionTime,
     estimatedTime,
     priorityRating,
-    completionStatus
   };
 
   // Add the task to our array of tasks
@@ -66,19 +65,19 @@ function renderTask(task) {
   itemDueDate.innerHTML = "<p>" + task.dueDate + "</p>";
 
   let itemCompletionTime = document.createElement("li");
-  itemDueDate.innerHTML = "<p>" + task.completionTime + "</p>";
+  itemCompletionTime.innerHTML = "<p>" + task.completionTime + "</p>";
   
   let itemEstimatedTime = document.createElement("li");
-  itemDueDate.innerHTML = "<p>" + task.estimatedTime + "</p>";
+  itemEstimatedTime.innerHTML = "<p>" + task.estimatedTime + "</p>";
 
   let itemPriorityRating = document.createElement("li");
-  itemDueDate.innerHTML = "<p>" + task.priorityRating + "</p>";
+  itemPriorityRating.innerHTML = "<p>" + task.priorityRating + "</p>";
 
   tasklist.appendChild(itemTaskDescription);
   tasklist.appendChild(itemDueDate);
   tasklist.appendChild(itemCompletionTime);
   tasklist.appendChild(itemEstimatedTime);
-  //tasklist.appendChild(itemPriorityRating);
+  tasklist.appendChild(itemPriorityRating);
 
 
 

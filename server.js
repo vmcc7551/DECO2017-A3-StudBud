@@ -16,3 +16,7 @@ app.get('/', function(req, res) {
 let server = app.listen(8888, function(){
     console.log("App server is running on port 8888");
 });
+
+
+//to run server url copy and paste
+//http://localhost:8888

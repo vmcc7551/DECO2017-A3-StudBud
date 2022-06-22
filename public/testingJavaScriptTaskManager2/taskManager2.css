@@ -1,0 +1,249 @@
+h4 {
+    margin: 0;
+  
+    font-family: 'Jost', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+h1.taskManager {
+    padding-top: 1%;
+  }
+  
+  input.column1 {
+  
+    margin: 20px auto;
+    
+    width: 35%;
+  
+  
+    font-family: Jost, sans-serif;
+    font-size: 40px;
+    font-weight: 400px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    
+    
+    color: black;
+    background-color: #f9eaec;
+    border: none;
+    
+  
+    text-align: center;
+  }
+  
+  input:hover {
+    background-color: #efdcde;
+  }
+  
+  [type=input]:focus {
+    outline: none;
+  }
+  
+  
+  
+  div.column1 {
+    padding: 30px;
+    margin: 0px 2.5%;
+    background-color: yellow;
+  }
+  
+  #checkboxLabel {
+    display: block;
+  }
+  
+  label input {
+    display: none; /* Hide the default checkbox */
+  }
+  
+  /* Style the artificial checkbox */
+  label span {
+    margin-top: 8px;
+    margin-right: 10px;
+    
+    height: 27px;
+    width: 27px;
+    
+    border-radius: 20px;
+  
+    background-color: red;
+    display: block;
+    float: left;
+    position: relative;
+  }
+  
+  /* Style its checked state...with a ticked icon */
+  [type=checkbox]:checked + span:before {
+    
+    position: absolute;
+    top: 0px;
+    left: 4px;
+  
+    font-size: 20px;
+  
+    content: '\2713';
+  
+    color: white;
+  
+  
+  }
+  /* ALL NEW CHANGES BELOW*/
+
+#addTaskPopUp {
+    width: 50%;
+
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+
+    position: fixed;
+
+    display: block;
+
+    padding: 40px;
+   
+
+    background-color: #dba4cd;
+}
+
+#createTaskTitle {
+    padding-bottom: 20px;
+
+    text-align: center;
+    font-size: 50px;
+    
+}
+
+#taskform label {
+    padding-left: 30px;
+    padding-right: 10px;
+
+    font-family: Jost, sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+}
+
+#taskform input, #taskform select {
+    padding-left: 10px;
+
+    font-family: 'Merriweather', serif;
+    font-weight: 500;
+    font-size: 28px;
+
+    color: #954782;
+    background-color:#dba4cd;
+    
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #954782;
+
+    outline:none;
+
+}
+
+#taskform input:hover, #taskform select:hover {
+    background-color: #ce90be;
+}
+
+
+#taskInput {
+    width: 75%;
+}
+
+#dueDateInput {
+    width: 220px;
+}
+
+#completionTimeInput {
+    width: 180px;
+}
+
+#estimatedTimeInput {
+    width: 70px
+}
+
+#taskSubmitButton {
+
+    margin-top: 60px;
+    margin-left: 36%;
+
+    padding: 10px 30px;
+
+    font-family: Jost, sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+
+    color: #dba4cd;
+    background-color: #1D1E2C;
+
+    border: none;
+}
+
+#taskSubmitButton:hover {
+    color: #f2c1e5;
+    background-color: #954782;
+}
+
+#taskSubmitButton:active {
+    color: #c39bb8;
+    background-color: #67315a;
+
+
+}
+
+
+
+/*other continued
+
+  dueDate {
+    margin-top: 0;
+    margin-left: 38px;
+  
+    font-size: 18.5px;
+    font-style: italic;
+  
+    display: inline;
+  }
+  
+  estimatedTime {
+    margin-top: 0;
+  
+    font-size: 18.5px;
+    
+    float: right;
+    display: inline;
+  }
+  
+  div.tasks {
+    padding: 15px 0px;
+  }
+  
+  .taskButton {
+    padding: 10px 40px;
+    margin: 20px;
+    
+    font-size: 25px;
+    font-weight: 200px;
+    
+    color: white;
+    background-color: #DDBDD5;
+    
+  }
+  
+
+
+
+  div.taskButtons {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  
+  .taskButton:hover {
+    background-color: #dba4cd;
+    
+  }*/
