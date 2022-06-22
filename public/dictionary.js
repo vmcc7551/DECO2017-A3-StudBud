@@ -50,6 +50,7 @@ requestDictionary.onload = function() {
       //console.log(dataDefinitions[i].definition);
 
       let singleDefinition = document.createElement("li");
+      singleDefinition.classList.add('singleDefinition');
       singleDefinition.innerHTML = dataDefinitions[i].definition;
 
       wordDefinitionList.appendChild(singleDefinition);
@@ -92,6 +93,7 @@ requestSynonym.onload = function() {
       //console.log(dataSynonyms[i]);
 
       let singleSynonym = document.createElement("li");
+      singleSynonym.classList.add('singleSynonym');
       singleSynonym.innerHTML = dataSynonyms[i];
 
       wordSynonymList.appendChild(singleSynonym);

@@ -1,7 +1,6 @@
 //Stopwatch Code
 var workingTime = document.getElementById("workingTime").value;
 var shortBreakTime = document.getElementById("shortBreakTime").value;
-var longBreakTime = document.getElementById("longBreakTime").value;
 var repeating = document.getElementById("repeating").value;
 
 var seconds = 00;
@@ -17,7 +16,7 @@ var buttonStop = document.getElementById('button-stop');
 var buttonReset = document.getElementById('button-reset');
 
 var buttonStartPomo = document.getElementById('button-start-pomo');
-var setPomoTime = document.getElementById('set-01:02:03');
+var setPomoTime = document.getElementById('button-set-pomo');
 
 var timeFinished;
 

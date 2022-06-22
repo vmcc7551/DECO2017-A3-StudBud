@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico"  />
+    <link href="pomodoro.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,500;0,700;1,500&family=Merriweather:ital,wght@0,400;1,400;1,700&display=swap" rel="stylesheet">
+
+
+    <title>Pomodoro Timer</title>
+  </head>
+  <body>
+    <div id="main" class="session-mode">
+      <div id="title" class="text"></div>
+      <div class="countdown-wrapper">
+          <span id="countdown"></span>
+      </div>
+
+      <div id="startPause" class="button">
+        <p id="startPauseText" class="button-text text"></p>
+      </div>
+      <div id="reset" class="button">
+        <p class="button-text text">Reset</p>
+      </div>
+
+      <div class="session-time time-box">
+        <p class="text">Session Length</p>
+        <span id="sessionMinus" class="signs">-</span>
+        <span id="sessionLength"></span>
+        <span id="sessionPlus" class="signs">+</span>
+      </div>
+
+      <div class="break-time time-box">
+        <p class="text">Break Length</p>
+        <span id="breakMinus" class="signs">-</span>
+        <span id="breakLength"></span>
+        <span id="breakPlus" class="signs">+</span>
+      </div>
+    </div>
+    <script src="pomodoro.js"></script>
+  </body>
+</html>

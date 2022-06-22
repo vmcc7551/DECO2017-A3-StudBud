@@ -1,0 +1,98 @@
+body {
+    margin: 0 auto;
+  }
+  
+  .text {
+    font-family: 'Jost', sans-serif;
+  }
+  
+  #title {
+    
+
+
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 50px;
+  }
+  
+  
+  .countdown-wrapper {
+    text-align: center;
+  }
+  
+  #countdown {
+    font-family: 'Jost', sans-serif;
+    font-weight: 200;
+    font-size: 13vh;
+
+    
+  }
+  
+  .time-box {
+    
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .time-box p {
+    
+    font-size: 24px !important;
+
+  }
+  
+  .session-time{
+
+  }
+
+  .break-time{
+
+
+  }
+  
+  /*set user select to none: ensures no highlighting in case the user clicks a bunch of times */
+  .signs:hover {
+    cursor: pointer;
+  }
+  
+  .button {
+
+    margin: 0px 10px;
+
+    padding: 7px 50px;
+    
+
+    background-color: #DDBDD5;
+    color: #59656F;
+    outline: 0;
+
+    float: left;
+
+
+    
+  }
+  
+  .button:hover {
+    cursor: pointer;
+
+  }
+  
+
+  
+  .button-text {
+    font-size: 30px;
+    text-align: center;
+
+    
+  }
+  
+  #startPause {
+    
+  }
+
+  #reset {
+    background-color: #AC9FBB;
+    color: #F7EBEC;
+  }
+  
