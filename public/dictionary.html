@@ -30,39 +30,30 @@
 
     <h2>Need a synonym? Don't know what something means? Search for it!</h2>
 
-    <input type="search" id="searchWord" placeholder="Type your word here">
-  
-
+    <input type="search" id="searchInput" placeholder="Type your word here">
+    <button id="searchButton">Search</button>
+    
     <!--The information based on the search results-->
-    <div id="information">
-      
-      <h4 id="word">Word</h4>
-      
-      <div id="detailedInformation">
-        
-        <h5 id="wordDefinitionTitle">Definition</h5>
+    <div id = "information">
+        <h4 id="word"></h4>
 
-        <p id="wordDefintion">a single distinct meaningful element of speech or writing, used with others (or sometimes alone) to form a sentence and typically shown with a space on either side when written or printed.</p>
-      
-        <h5 id="wordSynonymsTitle">Synonyms</h5>
-      
-        <ul id="wordSynonyms">
-          <li class="singleSynonym">phrase</li>
-          <li class="singleSynonym">express</li>
-          <li class="singleSynonym">put</li>
-        </ul>
+        <div id="detailedInformation">
+            <h5 id="wordDefinitionTitle"></h5>
+            <ul id="wordDefinitionList"></ul>
         
-      </div>
+            <h5 id="wordSynonymTitle"></h5>
+            <ul id="wordSynonymList"></ul>
+        </div>
     </div>
   </div>
 
 
 
-  <!--Footer-->
+  <!--Footer
   <div class="footer">
     <p class="footer"><strong>StudBud</strong> </br> ©  2022 DesCo - All Rights Reserved.</p>
-  </div>
+  </div>-->
 
-  <script src="script.js"></script>
+  <script src="dictionary.js"></script>
   
 </body>

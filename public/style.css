@@ -150,7 +150,7 @@ ul.nav {
 }
 
 /*FOOTER (not including index)*/
-div.footer{
+/*div.footer{
   width: 100%;
   height: 10%;
   
@@ -176,7 +176,7 @@ p.footer{
   font-weight: 500;
   
   color: #DDBDD5;
-}
+}*/
 
 /* ALL INDEX SPECIFIC CODE */
 
@@ -509,15 +509,13 @@ div.timerButtons {
 
 /*ALL DICTIONARY SPECIFIC CODE*/
 
-div.dictionary {
-  height: 80%;
-}
 
 h1.dictionary {
   padding-top: 1%;
+
 }
 
-input#searchWord {
+input#searchInput {
 
   margin: 40px auto;
   width: 80%;
@@ -539,6 +537,26 @@ input#searchWord {
 
 [type=search]:focus {
   outline: none;
+}
+
+#searchButton {
+
+  margin-top: -20px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 7px 40px;
+
+  font-size: 22.5px;
+
+  display: block;
+  
+  
+
+  background-color: #45515a;
+
+  
 }
 
 div#information {
@@ -563,7 +581,7 @@ div#detailedInformation {
   padding-bottom: 15px;
 }
 
-li.singleSynonym {
+.singleSynonym {
 
   margin: 10px;
   padding: 15px 30px;
@@ -574,6 +592,12 @@ li.singleSynonym {
 
   display: inline;
   
+}
+
+#dictionaryFooter {
+  position:relative;
+
+  trans
 }
 
 /*ALL MUSIC PLAYER SPECIFIC CODE*/
