@@ -1,5 +1,25 @@
 var word = document.getElementById("word");
+var searchInput = document.getElementById("searchInput");
+var searchButton = document.getElementById("searchButton");
+
+var wordDefinitionTitle = document.getElementById("wordDefinitionTitle");
+var wordSynonymTitle = document.getElementById("wordSynonymTitle");
+
 var wordDefinitionList = document.getElementById("wordDefinitionList");
+var wordSynonymList = document.getElementById("wordSynonymList");
+
+function updateInputValue() {
+
+  //removing all previous data
+  clearLists();
+
+  var inputValue = searchInput.value;
+  //console.log(inputValue);
+
+
+word.innerHTML =  inputValue;
+wordDefinitionTitle.innerHTML = "Definition";
+wordSynonymTitle.innerHTML = "Synonyms";
 
 //Collecting Data from the API for the Dictionary
 var requestDictionary = new XMLHttpRequest();
@@ -11,7 +31,7 @@ requestDictionary.addEventListener("readystatechange", function () {
 });
 
 //Finding and running the API
-requestDictionary.open("GET", "https://wordsapiv1.p.rapidapi.com/words/angry/definitions");
+requestDictionary.open("GET", "https://wordsapiv1.p.rapidapi.com/words/" + inputValue + "/definitions");
 requestDictionary.setRequestHeader("X-RapidAPI-Key", "2e4ba87828mshb405566e51db918p10f940jsncc9b1d992d28");
 requestDictionary.setRequestHeader("X-RapidAPI-Host", "wordsapiv1.p.rapidapi.com");
 
@@ -41,7 +61,7 @@ requestDictionary.onload = function() {
 requestDictionary.send();
 
 
-var wordSynonymList = document.getElementById("wordSynonymList");
+
 //Collecting Data from the API for the Synonymns
 var requestSynonym = new XMLHttpRequest();
 requestSynonym.withCredentials = true;
@@ -52,7 +72,7 @@ requestSynonym.addEventListener("readystatechange", function () {
 });
 
 //Finding and running the API
-requestSynonym.open("GET", "https://wordsapiv1.p.rapidapi.com/words/angry/synonyms");
+requestSynonym.open("GET", "https://wordsapiv1.p.rapidapi.com/words/" + inputValue + "/synonyms");
 requestSynonym.setRequestHeader("X-RapidAPI-Key", "2e4ba87828mshb405566e51db918p10f940jsncc9b1d992d28");
 requestSynonym.setRequestHeader("X-RapidAPI-Host", "wordsapiv1.p.rapidapi.com");
 
@@ -62,14 +82,14 @@ requestSynonym.onload = function() {
   if (requestSynonym.status >=200 && requestSynonym.status <400) {
 
     let data2 = JSON.parse(this.response);
-    console.log(data2.synonyms);
+    //console.log(data2.synonyms);
     
     let dataSynonyms = data2.synonyms;
 
     //getting each definition, to then add to a list
     for (let i = 0; i < dataSynonyms.length; i++) {
       
-      console.log(dataSynonyms[i]);
+      //console.log(dataSynonyms[i]);
 
       let singleSynonym = document.createElement("li");
       singleSynonym.innerHTML = dataSynonyms[i];
@@ -81,3 +101,17 @@ requestSynonym.onload = function() {
 }
 
 requestSynonym.send();
+
+}
+
+function clearLists() {
+  
+  wordDefinitionList.innerHTML = "";
+  wordSynonymList.innerHTML = "";
+
+  }
+
+
+
+
+searchButton.addEventListener('click', updateInputValue);
