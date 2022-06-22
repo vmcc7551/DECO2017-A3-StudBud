@@ -1,8 +1,8 @@
 //Stopwatch Code
-/*var workingTime = document.getElementById("workingTime").value;
+var workingTime = document.getElementById("workingTime").value;
 var shortBreakTime = document.getElementById("shortBreakTime").value;
 var longBreakTime = document.getElementById("longBreakTime").value;
-var repeating = document.getElementById("repeating").value;*/
+var repeating = document.getElementById("repeating").value;
 
 var seconds = 00;
 var minutes = 00;
@@ -16,10 +16,10 @@ var buttonStart = document.getElementById('button-start');
 var buttonStop = document.getElementById('button-stop');
 var buttonReset = document.getElementById('button-reset');
 
-/*var buttonStartPomo = document.getElementById('button-start-pomo');
+var buttonStartPomo = document.getElementById('button-start-pomo');
 var setPomoTime = document.getElementById('set-01:02:03');
 
-var timeFinished;*/
+var timeFinished;
 
 var interval; 
 
