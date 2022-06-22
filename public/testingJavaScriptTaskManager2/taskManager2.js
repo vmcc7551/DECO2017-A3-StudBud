@@ -78,52 +78,79 @@ function addTask(taskDescription, dueDate, completionTime, estimatedTime, urgenc
 
 // Function to display the item on the page
 function renderTask(task) {
-  
-  let item = document.createElement("ul");
+
+  let br = document.createElement("br");
+
+    // Setup checkbox DOM elements
+    let completeCheckbox = document.createElement("input");
+    completeCheckbox.type = 'checkbox';
+    completeCheckbox.classList.add('newCompleteCheckbox');
+
   let itemTaskDescription = document.createElement("li");
-  itemTaskDescription.innerHTML = "<p>" + task.taskDescription + "</p>";
+  itemTaskDescription.innerHTML = "<span></span> <label>" + task.taskDescription + "</label>";
   itemTaskDescription.classList.add('newElement', 'newName');
 
   let itemDueDate = document.createElement("li");
-  itemDueDate.innerHTML = "<p>" + task.dueDate + "</p>";
+  itemDueDate.innerHTML = "<p> Due: " + task.dueDate + "</p>";
   itemDueDate.classList.add('newElement', 'newDueDate');
 
   let itemCompletionTime = document.createElement("li");
-  itemCompletionTime.innerHTML = "<p>" + task.completionTime + "</p>";
+  itemCompletionTime.innerHTML = "<p>, at " + task.completionTime + "</p>";
   itemCompletionTime.classList.add('newElement', 'newCompletionTime');
   
   let itemEstimatedTime = document.createElement("li");
-  itemEstimatedTime.innerHTML = "<p>" + task.estimatedTime + "</p>";
+  itemEstimatedTime.innerHTML = "<p>Estimated Completion Time: " + task.estimatedTime + " mins</p>";
   itemEstimatedTime.classList.add('newElement', 'newEstimatedTime');
 
-  let itemUrgencyRating = document.createElement("li");
+  /*let itemUrgencyRating = document.createElement("li");
   itemUrgencyRating.innerHTML = "<p>" + task.urgencyRating + "</p>";
   itemUrgencyRating.classList.add('UrgencyRating');
 
   let itemImportanceRating = document.createElement("li");
   itemImportanceRating.innerHTML = "<p>" + task.importanceRating + "</p>";
-  itemImportanceRating.classList.add('ImportanceRating');
+  itemImportanceRating.classList.add('ImportanceRating');*/
 
+  
+ // Setup delete button DOM elements
+ let delButton = document.createElement("button");
+ delButton.classList.add('newDelete');
+ 
+ let delButtonText = document.createTextNode("✕");
+ 
+ delButton.appendChild(delButtonText);
+ //completeCheckbox.appendChild(completeCheckboxText);
+
+
+ // Adds a delete button for each task block
+ 
+  
+  
+  tasklist.appendChild(completeCheckbox);
   tasklist.appendChild(itemTaskDescription);
+  
   tasklist.appendChild(itemDueDate);
   tasklist.appendChild(itemCompletionTime);
-  tasklist.appendChild(itemEstimatedTime);
-  tasklist.appendChild(itemUrgencyRating);
-  tasklist.appendChild(itemImportanceRating);
-
-  // Setup delete button DOM elements
-  let delButton = document.createElement("button");
-  let delButtonText = document.createTextNode("Delete");
-  delButton.appendChild(delButtonText);
-
-
-  // Adds a delete button for each task block
   tasklist.appendChild(delButton); 
+  tasklist.appendChild(itemEstimatedTime);
+  tasklist.appendChild(br);
+  /*tasklist.appendChild(itemUrgencyRating);
+  tasklist.appendChild(itemImportanceRating);*/
+
+  tasklist.appendChild(br);
+
+  delButton.addEventListener("click", function(event){
+    task.remove(); // Remove the task item from the page when button clicked
+    
+    // Because we used 'let' to define the item, this will always delete the right element
+  })
 
 }
 
+/*function taskSeperation {
+  for (let i = 0; i < taskList.length; i++) {
 
-
+  }
+}*/
 
   //Function to switch pop up
   function toggleSettings() {
@@ -150,11 +177,7 @@ taskSubmitButton.addEventListener("click", toggleSettings);
 window.addEventListener("click", settingsOnClick);
 
   // Listen for when the 
-  delButton.addEventListener("click", function(event){
-    tasklist.remove(); // Remove the task item from the page when button clicked
-    
-    // Because we used 'let' to define the item, this will always delete the right element
-  })
+  
   
   // Clear the value of the input once the task has been added to the page
   form.reset();
