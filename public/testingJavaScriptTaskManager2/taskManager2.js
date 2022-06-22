@@ -1,3 +1,13 @@
+//Creating the settings pop up box
+let settings = document.querySelector(".settings");
+let show = document.querySelector(".show");
+let closeButton = document.querySelector(".closeButton");
+
+//settings = settings
+//show = show
+//addTaskPopUp = settingsBox
+
+/*
 // Setting up variables for our HTML elements using DOM selection
 const form = document.getElementById("taskform");
 const button = document.querySelector("#taskform > button"); // Complex CSS query
@@ -79,24 +89,45 @@ function renderTask(task) {
   tasklist.appendChild(itemEstimatedTime);
   tasklist.appendChild(itemPriorityRating);
 
-
-
-  
   // Setup delete button DOM elements
   let delButton = document.createElement("button");
   let delButtonText = document.createTextNode("Delete");
   delButton.appendChild(delButtonText);
 
+
   // Adds a delete button for each task block
   tasklist.appendChild(delButton); 
 
+*/
+
+  //Function to switch pop up
+  function toggleSettings() {
+  
+    settings.classList.toggle("showSettings");
+  
+}
+
+function settingsOnClick(event) {
+  
+  if (event.target === settings) {
+      toggleSettings();
+  }
+}
+
+
+show.addEventListener("click", toggleSettings);
+
+closeButton.addEventListener("click", toggleSettings);
+
+window.addEventListener("click", settingsOnClick);
+
   // Listen for when the 
-  delButton.addEventListener("click", function(event){
+  /*delButton.addEventListener("click", function(event){
     tasklist.remove(); // Remove the task item from the page when button clicked
     
     // Because we used 'let' to define the item, this will always delete the right element
-  })
+  })*/
   
   // Clear the value of the input once the task has been added to the page
   form.reset();
-}
+//}

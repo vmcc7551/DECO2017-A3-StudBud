@@ -37,12 +37,14 @@ html, body {
   
   .closeButton {
     float: right;
+
+    color: grey;
     
     text-align: center;
     cursor: pointer;
   }
   
-  p {
+  /*p {
     display: inline;
   }
   
@@ -57,7 +59,7 @@ html, body {
   
   [type=number]:disabled {
     background-color: black;
-  }
+  }*/
   
   
   .showSettings {

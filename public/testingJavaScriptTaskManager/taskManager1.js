@@ -6,7 +6,7 @@ let cancelButton = document.getElementById("cancelButton");
 
 //let taskName = document.getElementById("taskName");
 
-console.log("hello");
+/*console.log("hello");
 
 function updateTaskName() {
   
@@ -32,8 +32,7 @@ function updateTaskPriority() {
 
 const wholeTask = [];
 
-wholeTask.push("updateTaskTime");
-
+wholeTask.push("updateTaskTime");*/
 //console.log("wholeTask");
 
 //console.log("Task Name: " + updateTaskName + "Task Date: " + updateTaskDate + "Task Time: " + updateTaskTime + "Task Priority " + updateTaskPriority);
@@ -43,6 +42,7 @@ function toggleSettings() {
     settings.classList.toggle("showSettings");
   
 }
+
 function settingsOnClick(event) {
   
     if (event.target === settings) {

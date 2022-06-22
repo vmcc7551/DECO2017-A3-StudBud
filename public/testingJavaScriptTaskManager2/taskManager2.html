@@ -14,40 +14,49 @@
 
   <body>
 
-    <div id="addTaskPopUp">
+    <!-- All code for the General Task Screen-->
+    <button class="show">Add a New Task</button>
 
-      <h4 id="createTaskTitle">Create a New Task</h4>
+      
+    <!-- All code for the Task Selector Screen-->
+    <div class="settings">
 
-      <form id="taskform">
-        <label for="task" id="taskLabel">Task:</label>
-        <input type="text" name="task" id="taskInput">
-  
+      <div class="addTaskPopUp">
+
+        <span class="closeButton">✕</span>
+
+        <h4 id="createTaskTitle">Create a New Task</h4>
+
+        <form id="taskform">
+          <label for="task" id="taskLabel">Task:</label>
+          <input type="text" name="task" id="taskInput">
+    
+          <br>
+        <!-- Date input -->
+          <label for="dueDate" id="dueDateLabel">Due Date: </label>
+          <input type="date" name="dueDate" id="dueDateInput">
+          <br>
+        <!-- Time input -->
+        <label for="completionTime" id="completionTimeLabel">Completion Time: </label>
+          <input type="time" name="completionTime" id="completionTimeInput">
+    
+          <br>
+    
+        <label for="estimatedTime" id="estimatedTimeLabel">Estimated Time to Complete:</label>
+        <input type="number" name="estimatedTime" id="estimatedTimeInput" min="1">
+        <label for="estimatedTime">mins</label>
+        <!-- Priority -->
         <br>
-      <!-- Date input -->
-        <label for="dueDate" id="dueDateLabel">Due Date: </label>
-        <input type="date" name="dueDate" id="dueDateInput">
+    
+        <label for="priority" id="priorityLabel">Task Priority:</label>
+        <select name="prority" id="priorityInput">
+          <option value="N/A">N/A</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+    
         <br>
-      <!-- Time input -->
-      <label for="completionTime" id="completionTimeLabel">Completion Time: </label>
-        <input type="time" name="completionTime" id="completionTimeInput">
-  
-        <br>
-  
-      <label for="estimatedTime" id="estimatedTimeLabel">Estimated Time to Complete:</label>
-      <input type="number" name="estimatedTime" id="estimatedTimeInput" min="1">
-      <label for="estimatedTime">mins</label>
-      <!-- Priority -->
-      <br>
-  
-      <label for="priority" id="priorityLabel">Task Priority:</label>
-      <select name="prority" id="priorityInput">
-        <option value="N/A">N/A</option>
-        <option value="Low">Low</option>
-        <option value="Medium">Medium</option>
-        <option value="High">High</option>
-      </select>
-  
-      <br>
   
         <button type="submit" id="taskSubmitButton">Submit</button>
       </form>
@@ -55,6 +64,8 @@
       </ul>
 
     </div>
+
+  </div>
     
     <!-- <script src="script.js"></script> -->
     <!-- Swap the scripts to see the working solution -->
