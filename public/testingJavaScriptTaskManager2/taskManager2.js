@@ -82,23 +82,23 @@ function renderTask(task) {
   let br = document.createElement("br");
 
     // Setup checkbox DOM elements
-    let completeCheckbox = document.createElement("input");
+    var completeCheckbox = document.createElement("input");
     completeCheckbox.type = 'checkbox';
     completeCheckbox.classList.add('newCompleteCheckbox');
 
-  let itemTaskDescription = document.createElement("li");
+  var itemTaskDescription = document.createElement("li");
   itemTaskDescription.innerHTML = "<span></span> <label>" + task.taskDescription + "</label>";
   itemTaskDescription.classList.add('newElement', 'newName');
 
-  let itemDueDate = document.createElement("li");
+  var itemDueDate = document.createElement("li");
   itemDueDate.innerHTML = "<p> Due: " + task.dueDate + "</p>";
   itemDueDate.classList.add('newElement', 'newDueDate');
 
-  let itemCompletionTime = document.createElement("li");
+  var itemCompletionTime = document.createElement("li");
   itemCompletionTime.innerHTML = "<p>, at " + task.completionTime + "</p>";
   itemCompletionTime.classList.add('newElement', 'newCompletionTime');
   
-  let itemEstimatedTime = document.createElement("li");
+ var itemEstimatedTime = document.createElement("li");
   itemEstimatedTime.innerHTML = "<p>Estimated Completion Time: " + task.estimatedTime + " mins</p>";
   itemEstimatedTime.classList.add('newElement', 'newEstimatedTime');
 
@@ -112,10 +112,10 @@ function renderTask(task) {
 
   
  // Setup delete button DOM elements
- let delButton = document.createElement("button");
+ var delButton = document.createElement("button");
  delButton.classList.add('newDelete');
  
- let delButtonText = document.createTextNode("✕");
+ var delButtonText = document.createTextNode("✕");
  
  delButton.appendChild(delButtonText);
  //completeCheckbox.appendChild(completeCheckboxText);
@@ -132,19 +132,42 @@ function renderTask(task) {
   tasklist.appendChild(itemCompletionTime);
   tasklist.appendChild(delButton); 
   tasklist.appendChild(itemEstimatedTime);
+
   tasklist.appendChild(br);
   /*tasklist.appendChild(itemUrgencyRating);
   tasklist.appendChild(itemImportanceRating);*/
 
-  tasklist.appendChild(br);
+  //tasklist.appendChild(br);
 
-  delButton.addEventListener("click", function(event){
-    task.remove(); // Remove the task item from the page when button clicked
-    
+
+    //delete taskInput.itemTaskDescription;
+
+
+    delButton.addEventListener("click", removeTask);
+
+
+
+  
+
+     // Remove the task item from the page when button clicked
+    function removeTask() {
+      console.log("hi");
+      
+      tasklist.removeChild(completeCheckbox);
+      tasklist.removeChild(itemTaskDescription);
+
+      tasklist.removeChild(itemDueDate);
+      tasklist.removeChild(itemCompletionTime);
+      tasklist.removeChild(delButton); 
+      tasklist.removeChild(itemEstimatedTime);
+
+      tasklist.removeChild(br);
+
+    }
     // Because we used 'let' to define the item, this will always delete the right element
-  })
+  }
 
-}
+
 
 /*function taskSeperation {
   for (let i = 0; i < taskList.length; i++) {
