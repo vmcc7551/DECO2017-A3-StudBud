@@ -31,49 +31,74 @@
     <h2>Always lose track of due dates? Want to get ahead on your next assignment? Schedule it, so you'll never miss a beat.</h2>
 
     <!--Viewing Task Area-->
-    <div class="taskManagerColumns">
+    <div class="column">
 
-      <input type="input" class="column1" placeholder="Column Title">
+      <p class="important+urgent columnTitle">Important and Urgent Tasks</p>
+      <ul id="tasklistUI"></ul>
+
+      <p class="-important+urgent columnTitle">Urgent but Not Important Tasks</p>
+      <ul id="tasklistUi"></ul>
+
+      <p class="important-urgent columnTitle">Important but Not Urgent Tasks</p>
+      <ul id="tasklistuI"></ul>
+
+      <p class="-important-urgent columnTitle">Neither Urgent nor Important Tasks</p>
+      <ul id="tasklistui"></ul>
       
-      <div class=column1>
+    </div>
 
-        <div id="task1" class="tasks">
-          <label id="checkboxLabel">
-            <input type="checkbox" class="checkbox">
-            <span></span>
-            Task Name
-          </label>
-          
-          <p id="dueDate1">Due Date</p>
-          <p id="estimatedTime1"><em>Estimated Time Left:</em> Days:0 Hours:0 Minutes:0</p>
-        </div>
+    <button class="show">Add a New Task +</button>
 
-        <div id="task2" class="tasks">
-          <label id="checkboxLabel">
-            <input type="checkbox" class="checkbox">
-            <span></span>
-            Task Name
-          </label>
-          
-          <p id="dueDate1">Due Date</p>
-          <p id="estimatedTime1"><em>Estimated Time Left:</em> Days:0 Hours:0 Minutes:0</p>
-        </div>
-        
-      </div>
+      
+    <!-- All code for the Task Selector Screen-->
+    <div class="settings">
+
+      <div class="addTaskPopUp">
+
+        <span class="closeButton">✕</span>
+
+        <h4 id="createTaskTitle">Create a New Task</h4>
+
+        <form id="taskform">
+          <label for="task" id="taskLabel">Task:</label>
+          <input type="text" name="task" id="taskInput">
+    
+          <br>
+        <!-- Date input -->
+          <label for="dueDate" id="dueDateLabel">Due Date: </label>
+          <input type="date" name="dueDate" id="dueDateInput">
+          <br>
+        <!-- Time input -->
+        <label for="completionTime" id="completionTimeLabel">Completion Time: </label>
+          <input type="time" name="completionTime" id="completionTimeInput">
+    
+          <br>
+    
+        <label for="estimatedTime" id="estimatedTimeLabel">Estimated Time to Complete:</label>
+        <input type="number" name="estimatedTime" id="estimatedTimeInput" min="1">
+        <label for="estimatedTime">mins</label>
+        <!-- Priority -->
+        <br>
+    
+        <label for="urgencyImportance" id="urgencyImportanceLabel">Task Priority:</label>
+        <select name="urgencyImportance" id="urgencyImportanceInput">
+          <option value="UI">Urgent and Important</option>
+          <option value="Ui">Urgent but Not Important</option>
+          <option value="uI">Not Urgent but Important</option>
+          <option value="ui">Not Urgent and Not Important</option>
+        </select>
+    
+        <br>
+  
+        <button type="submit" id="taskSubmitButton">Submit</button>
+      </form>
 
     </div>
 
-    <div class="taskButtons">
-      
-      <button class="taskButton">Add a New Task</button>
-
-      <button class="taskButton">Add a New Column</button>
-      
-    </div>
     
   </div>
 
-
+  <script src="taskManager.js"></script>
 
 
 

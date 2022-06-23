@@ -224,7 +224,9 @@ li p {
 
 .show {
     padding: 10px 40px;
-    margin: 20px;
+    margin: 20px auto;
+
+  
     
     font-family: 'Jost', sans-serif;
     font-size: 25px;
