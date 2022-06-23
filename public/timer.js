@@ -1,11 +1,11 @@
 //Stopwatch Code
-var workingTime = document.getElementById("workingTime").value;
-var shortBreakTime = document.getElementById("shortBreakTime").value;
-var longBreakTime = document.getElementById("longBreakTime").value;
-var repeating = document.getElementById("repeating").value;
+//var workingTime = document.getElementById("workingTime").value;
+//var shortBreakTime = document.getElementById("shortBreakTime").value;
+//var longBreakTime = document.getElementById("longBreakTime").value;
+//var repeating = document.getElementById("repeating").value;
 
 var seconds = 00;
-var minutes = 10;
+var minutes = 00;
 var hours = 00;
 
 var appendSeconds = document.getElementById('seconds');
@@ -57,7 +57,7 @@ function startStopwatch() {
         if(interval) {
             clearInterval(interval);}
 
-        interval = setInterval(startStopwatch, 10); 
+        interval = setInterval(startStopwatch, 1000); 
     }
    
     buttonStop.onclick = function(){
@@ -77,7 +77,7 @@ function startStopwatch() {
 
     //Pomodoro Code
 
-var startPauseText = document.getElementById("startPauseText");
+/*var startPauseText = document.getElementById("startPauseText");
 var countdown = document.getElementById("countdown");
 var title = document.getElementById("title");
 var sessionLength = document.getElementById("sessionLength");
@@ -284,4 +284,4 @@ function convertToString(seconds){
   min = min < 10 ? "0" + min : min;
   sec = sec < 10 ? "0" + sec : sec; //if seconds < 10, add a 0 before (i.e. display 2:01 rather than 2:1);
   return min + ":" + sec;
-}
+} */

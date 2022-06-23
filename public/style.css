@@ -104,7 +104,6 @@ ul.nav {
   list-style: none;
   overflow: auto;
 
-  background-color: blue;
 }
 
 .nav p {
@@ -177,6 +176,8 @@ img.section1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+  opacity: 70%;
 }
 
 
@@ -267,6 +268,9 @@ h1.taskManager {
 
 }
 
+div.taskManager {
+  padding-bottom: 10px;
+}
 .column {
     
   margin-left: auto;
@@ -453,7 +457,7 @@ h1.taskManager {
 
   font-size: 25px;
 
-  color: #ae5c99;
+  color: #a5c99;
   
   cursor: pointer;
 }
@@ -578,12 +582,13 @@ img.timerSettings{
 }
 
 img.timer {
-  width: auto;
-  height: 40%;
+  width: 25%;
   
   display: flex;
   margin-left: auto;
   margin-right: auto;
+
+  opacity: 70%;
 }
 
 
@@ -603,8 +608,6 @@ div.timerButtons {
   font-size: 30px;
   
   padding: 7px 50px;
-
-  margin-right: 30px;
   
   background-color: #AC9FBB;
   color: #F7EBEC;
@@ -771,8 +774,23 @@ div#musicSelectionArea {
 
 /*Screen Size Max 1280-601px (Tablet)*/
 @media only screen and (max-width: 1280px) {
+
   
-  /*Navigation Bar Resizing
+  /*General Resizing*/
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h4 {
+    font-size: 60px;
+  }
+
+  h5 {
+    font-size: 40px;
+  }
+  
+  /*Navigation Bar Resizing*/
   .nav li.leftNav {
     float: none;
     width: 100%;
@@ -802,27 +820,139 @@ div#musicSelectionArea {
     padding-right: 5px;
   }
 
-  /*Section 1 of Index Resizing
+  /*Section 1 of Index Resizing*/
   h2.section1 {
-    font-size: 25px;
+    font-size: 30px;
     padding: 0px 11vw;
   }
   
   img.section1 {
     width: 300px;
-    height: 360px;
   }
   
   h1.section1 {
-    
-  }*/
+    padding-top: 40px;
+    font-size: 50px;
+  }
+
+/*Section 2 of Index Resizing*/
+
+h2.section2 {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.iconSection2 {
+  width: 60%;
+  height: 60%;
+}
+
+.section2 li a {
+  font-size: 20px;
+}
+
+/*Task Manager of Index Resizing*/
+
+.columnTitle {
+  font-size: 30px;
+}
+
+.addTaskPopUp {
+  height: 50%;
+
+  padding: 20px;
+}
+
+#taskform {
+  text-align: center;
+}
+
+#createTaskTitle {
+  font-size: 30px;
+  
+}
+
+#taskform label {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 10px;
+
+  font-size: 20px;
+}
+
+#taskLabel {
+  padding-bottom: 20px;
+}
+
+#taskform input, #taskform select {
+  padding: none;
+  font-size: 20px;
+}
+
+#taskInput {
+  width: 70%;
+}
+
+#dueDateInput {
+  width: 170px;
+}
+
+#completionTimeInput {
+  width: 100px;
+}
+
+#estimatedTimeLabel{
+  font-size: 16px;
+}
+
+#estimatedTimeInput {
+  width: 70px
+}
+
+#urgencyImportanceInput {
+  width: 40%;
+}
+
+.newCompleteCheckbox {
+  padding-bottom: none;
+}
+
+.newDueDate, .newCompletionTime, .newEstimatedTime {
+  font-size: 14px;
+  margin-right: 0px;
+}
+
+/*Timer Resizing*/
+
+img.timer {
+  width: 300px;
+}
+
+/*Dictionary Resizing*/
+
+input#searchInput {
+  font-size: 4vh;
 }
 
 
+li.singleSynonym {
+  font-size: 20px;
+}
+
+
+
 /*Screen Size Max 600-px (Phone)*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 414px) {
   
-  /*Navigation Bar Resizing
+  /*General Resizing*/
+  h1 {
+    font-size: 6vh;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+  
+  /*Navigation Bar Resizing*/
   .nav li {
     width: 25%;
   }
@@ -849,7 +979,99 @@ div#musicSelectionArea {
 
     padding: 7.5px;
   }
-} */
+
+  /*Section 1 of Index Resizing*/
+  h2.section1 {
+    font-size: 3vh;
+    padding: 0px;
+  }
+
+  img.section1 {
+    width: 270px;
+  }
+
+  h1.section1 {
+    padding-top: 20px;
+    font-size: 6vh;
+  }
+
+  /*Task Manager Resizing*/
+
+  .columnTitle {
+    font-size: 25px;
+  }
+
+  .addTaskPopUp {
+    width: 70%;
+    height: 41%
+  }
+  #createTaskTitle {
+    font-size: 20px;
+  }
+
+  .closeButton {
+    font-size: 10px;
+  }
+
+  #taskform label {
+    font-size: 18px;
+  }
+
+  #taskform input, #taskform select {
+    font-size: 16px;
+  }
+
+  #dueDateInput {
+    width: 140px;
+  }
+
+  #completionTimeInput {
+    width: 80px;
+  }
+
+  #taskSubmitButton {
+    margin-left: 0;
+    margin-top: 20px;
+
+    padding: 5px 15px;
+
+    font-size: 25px;
+  }
+
+  .newDueDate {
+    padding-bottom: 5px;
+  }
+
+  .newEstimatedTime {
+    margin-top: -30px;
+
+    display: block;
+    float: left;
+  }
+
+  /*Timer resizing*/
+
+  h3.timer {
+    font-size: 20vw;
+  }
+
+  img.timer {
+    width: 50%;
+  }
+
+  #button-start, #button-stop, #button-reset {
+
+    font-size: 30px;
+    padding: 5px 20px;
+  }
+
+  /*Dictionary Resizing*/
+
+  #searchButton {
+    font-size: 50px;
+  }
+
+} 
 
 /* */
 
