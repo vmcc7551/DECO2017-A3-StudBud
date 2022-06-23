@@ -1,3 +1,4 @@
+//getting all the variables
 var word = document.getElementById("word");
 var searchInput = document.getElementById("searchInput");
 var searchButton = document.getElementById("searchButton");
@@ -14,9 +15,8 @@ function updateInputValue() {
   clearLists();
 
   var inputValue = searchInput.value;
-  //console.log(inputValue);
 
-
+//changing the html elements to display definition and synonyms
 word.innerHTML =  inputValue;
 wordDefinitionTitle.innerHTML = "Definition";
 wordSynonymTitle.innerHTML = "Synonyms";
@@ -83,14 +83,11 @@ requestSynonym.onload = function() {
   if (requestSynonym.status >=200 && requestSynonym.status <400) {
 
     let data2 = JSON.parse(this.response);
-    //console.log(data2.synonyms);
     
     let dataSynonyms = data2.synonyms;
 
     //getting each definition, to then add to a list
     for (let i = 0; i < dataSynonyms.length; i++) {
-      
-      //console.log(dataSynonyms[i]);
 
       let singleSynonym = document.createElement("li");
       singleSynonym.classList.add('singleSynonym');
@@ -106,6 +103,7 @@ requestSynonym.send();
 
 }
 
+//reseting the definitions and synonymns when searching for a new word
 function clearLists() {
   
   wordDefinitionList.innerHTML = "";
@@ -113,7 +111,5 @@ function clearLists() {
 
   }
 
-
-
-
+//search button
 searchButton.addEventListener('click', updateInputValue);

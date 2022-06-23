@@ -20,10 +20,10 @@ const completionTimeInput = document.getElementById("completionTimeInput");
 const estimatedTimeInput = document.getElementById("estimatedTimeInput");
 const urgencyImportanceInput = document.getElementById("urgencyImportanceInput");
 
+
 // Event listener for Button click
-// This could also be form.addEventListener("submit", function() {...} )
 button.addEventListener("click", function(event) {
-  event.preventDefault(); // Not as necessary for button, but needed for form submit
+  event.preventDefault(); 
 
 //Getting all value inputs
   var task = taskInput.value;
@@ -39,14 +39,12 @@ button.addEventListener("click", function(event) {
   
   
 
-  // Call the addTask() function using
+  // Creating an add task function
   addTask(task, due, compTime, estTime, urgencyImportance);
 
-  // Log out the newly populated taskList everytime the button has been pressed
-  //console.log(taskList);
 })
 
-// Create empty arrays to store our tasks
+// Empty array for each task
 var taskList = [];
 
 function addTask(taskDescription, dueDate, completionTime, estimatedTime, 
@@ -58,10 +56,6 @@ function addTask(taskDescription, dueDate, completionTime, estimatedTime,
     estimatedTime,
     urgencyImportanceRating,
   };
-
-  console.log(task);
-
-  console.log(task.taskDescription);
 
 
   // Add the task to our array of tasks
@@ -99,13 +93,6 @@ function renderTask(task) {
   itemEstimatedTime.innerHTML = "<p>Estimated Completion Time: " + task.estimatedTime + " mins</p>";
   itemEstimatedTime.classList.add('newElement', 'newEstimatedTime');
 
-  /*let itemUrgencyRating = document.createElement("li");
-  itemUrgencyRating.innerHTML = "<p>" + task.urgencyImportanceRating + "</p>";
-  itemUrgencyRating.classList.add('UrgencyRating');
-
-  let itemImportanceRating = document.createElement("li");
-  itemImportanceRating.innerHTML = "<p>" + task.importanceRating + "</p>";
-  itemImportanceRating.classList.add('ImportanceRating');*/
 
   
  // Setup delete button DOM elements
@@ -115,14 +102,10 @@ function renderTask(task) {
  var delButtonText = document.createTextNode("✕");
  
  delButton.appendChild(delButtonText);
- //completeCheckbox.appendChild(completeCheckboxText);
 
 
- // Adds a delete button for each task block
 
-
-    //console.log(urgencyImportanceInput.value);
-  
+ // Putting the tasks under headings depending on the priority value
     
     if (urgencyImportanceInput.value == "UI") {
 
@@ -177,11 +160,7 @@ function renderTask(task) {
     
 
 
-
-  
-    //delete taskInput.itemTaskDescription;
-
-
+    //creating the delete task function
     delButton.addEventListener("click", removeTask);
 
 
@@ -245,21 +224,6 @@ function renderTask(task) {
       localStorage.removeItem("taskObject");
 
     }
-    // Because we used 'let' to define the item, this will always delete the right element
-
-    //local storage 
-
-    /*const taskObject = Object.values(task);
-    //console.log(taskObject);
-
-    window.localStorage.setItem("taskObject", taskObject);
-    localStorage.getItem("taskObject");
-
-    localStorage.setItem("taskObject",JSON.stringify(taskObject));
-
-    var storedArray = localStorage.getItem("taskObject");
-    taskObjects = JSON.parse(taskObject);*/
-
     
   }
     
@@ -282,7 +246,7 @@ function settingsOnClick(event) {
 
 
 
-
+//more buttons for pop up feature
 
 show.addEventListener("click", toggleSettings);
 
@@ -292,8 +256,7 @@ taskSubmitButton.addEventListener("click", toggleSettings);
 
 window.addEventListener("click", settingsOnClick);
 
-  // Listen for when the 
-  
-  
+
+
   // Clear the value of the input once the task has been added to the page
   form.reset();
