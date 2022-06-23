@@ -612,18 +612,22 @@ li.singleSynonym {
 
 
 /*ALL MUSIC PLAYER SPECIFIC CODE*/
-/*div.musicPlayer {
-  height: 80%;
-}*/
+div.musicPlayer {
+  height: 100%;
+}
 
 div#musicSelectionArea {
 
   margin: 3% auto;
 
   width: 90%;
-  height: 65%;
+  height: 55%;
 
   background-color: #576570;
+}
+
+#cincopa_a34f92 {
+  padding-bottom: 40px;
 }
 
 

@@ -18,7 +18,8 @@
     "HTTP"
   ],
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "sass": "^1.53.0"
   },
   "author": "vmcc7551",
   "license": "ISC",
@@ -27,8 +28,7 @@
   },
   "homepage": "https://github.com/vmcc7551/DECO2017-A3-StudBud#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
     "parcel": "^2.6.2"
   }
-
-  
 }

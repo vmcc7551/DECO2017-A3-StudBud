@@ -1,0 +1,450 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #f7ebec;
+}
+
+p {
+  font-family: Merriweather, serif;
+}
+
+h1 {
+  text-align: center;
+  color: #000;
+  margin: 0;
+  font-family: Jost, sans-serif;
+  font-size: 60px;
+  font-weight: 500;
+}
+
+h2 {
+  text-align: center;
+  color: #ac9fbb;
+  margin: 0 10%;
+  font-family: Merriweather, serif;
+  font-size: 27px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+h3 {
+  text-align: center;
+  margin: 0;
+  font-family: Jost, sans-serif;
+  font-size: 170px;
+  font-weight: 200;
+}
+
+h4 {
+  margin: 0;
+  font-family: Jost, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+h5 {
+  margin: 0;
+  font-family: Jost, sans-serif;
+  font-size: 27.5px;
+  font-style: italic;
+  font-weight: 200;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  font-family: Jost, sans-serif;
+  text-decoration: none;
+  display: inline-block;
+}
+
+label {
+  margin: 0;
+  font-family: Jost, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+ul.nav {
+  width: 100%;
+  background-color: #00f;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: auto;
+}
+
+.nav p {
+  font-family: Jost, sans-serif;
+  font-weight: 500;
+}
+
+.nav li {
+  float: left;
+  width: 20%;
+}
+
+.nav li a {
+  color: #fff;
+  text-align: center;
+  background-color: #ddbdd5;
+  align-items: center;
+  padding: auto;
+  font-size: 26px;
+  display: flex;
+}
+
+.nav li a:hover {
+  background-color: #d2a7c7;
+}
+
+.nav li.leftNav a {
+  padding: 20px 15%;
+  font-family: Jost, sans-serif;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.iconNav {
+  width: 50px;
+  height: 50px;
+  padding-left: 7.5%;
+  padding-right: 20px;
+}
+
+h1.section1 {
+  color: #59656f;
+  font-style: italic;
+}
+
+div.section1 {
+  height: 90%;
+}
+
+h2.section1 {
+  padding: 0 200px;
+  font-size: 35px;
+}
+
+img.section1 {
+  width: 30%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  display: block;
+}
+
+div.section2 {
+  height: 90%;
+  background-color: #59656f;
+}
+
+h2.section2 {
+  color: #f7ebec;
+  padding-top: 5%;
+}
+
+ul.section2 {
+  width: 85%;
+  margin: 7.5%;
+  padding: 0;
+  list-style: none;
+}
+
+.section2 p {
+  padding-bottom: 5%;
+  font-family: Jost, sans-serif;
+  font-weight: 500;
+}
+
+.section2 li {
+  float: left;
+  width: 20%;
+  padding: 0 2.5%;
+}
+
+.section2 li a {
+  color: #fff;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 30px;
+  display: block;
+}
+
+.iconSection2 {
+  width: 250px;
+  height: 250px;
+}
+
+div.indexFooter {
+  width: 100%;
+  height: 10%;
+  float: left;
+  background-color: #1d1e2c;
+}
+
+p.indexFooter {
+  text-align: center;
+  color: #fff;
+  padding: .5%;
+  font-family: Jost, sans-serif;
+  font-size: 13px;
+  font-weight: 200;
+}
+
+.indexFooter strong {
+  color: #59656f;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+h1.taskManager {
+  padding-top: 1%;
+}
+
+input.column1 {
+  width: 35%;
+  font-family: Jost, sans-serif;
+  font-size: 40px;
+  font-weight: 400px;
+  color: #000;
+  text-align: center;
+  background-color: #f9eaec;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  display: flex;
+  overflow: visible;
+}
+
+input:hover {
+  background-color: #efdcde;
+}
+
+[type="input"]:focus {
+  outline: none;
+}
+
+div.column1 {
+  background-color: #ff0;
+  margin: 0 2.5%;
+  padding: 30px;
+}
+
+#checkboxLabel {
+  display: block;
+}
+
+label input {
+  display: none;
+}
+
+label span {
+  height: 27px;
+  width: 27px;
+  float: left;
+  background-color: red;
+  border-radius: 20px;
+  margin-top: 8px;
+  margin-right: 10px;
+  display: block;
+  position: relative;
+}
+
+[type="checkbox"]:checked + span:before {
+  content: "✓";
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: 4px;
+}
+
+p#dueDate1 {
+  margin-top: 0;
+  margin-left: 38px;
+  font-size: 18.5px;
+  font-style: italic;
+  display: inline;
+}
+
+p#estimatedTime1 {
+  float: right;
+  margin-top: 0;
+  font-size: 18.5px;
+  display: inline;
+}
+
+div.tasks {
+  padding: 15px 0;
+}
+
+.taskButton {
+  font-size: 25px;
+  font-weight: 200px;
+  color: #fff;
+  background-color: #ddbdd5;
+  margin: 20px;
+  padding: 10px 40px;
+}
+
+div.taskButtons {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.taskButton:hover {
+  background-color: #dba4cd;
+}
+
+h1.timer {
+  padding-top: 1%;
+}
+
+img.timerSettings {
+  width: 50px;
+  height: 50px;
+  margin-left: 62%;
+}
+
+img.timer {
+  width: auto;
+  height: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+h3.timer {
+  height: 17vh;
+  font-size: 13vh;
+}
+
+div.timerButtons {
+  text-align: center;
+  margin-top: 0;
+}
+
+#button-reset {
+  color: #f7ebec;
+  background-color: #ac9fbb;
+  margin-right: 30px;
+  padding: 7px 50px;
+  font-size: 30px;
+}
+
+#button-reset:hover {
+  color: #eadbdc;
+  background-color: #9789a8;
+}
+
+#button-start, #button-stop {
+  color: #59656f;
+  background-color: #ddbdd5;
+  padding: 7px 50px;
+  font-size: 30px;
+}
+
+#button-start:hover, #button-stop:hover {
+  color: #45515a;
+  background-color: #d3b0ca;
+}
+
+h1.dictionary {
+  padding-top: 1%;
+}
+
+input#searchInput {
+  width: 80%;
+  color: #fff;
+  text-align: left;
+  background-color: #576570;
+  border: none;
+  margin: 40px auto;
+  padding: 10px;
+  font-family: Merriweather, serif;
+  font-size: 22.5px;
+  display: block;
+  overflow: visible;
+}
+
+[type="search"]:focus {
+  outline: none;
+}
+
+#searchButton {
+  background-color: #45515a;
+  margin-top: -20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 7px 40px;
+  font-size: 22.5px;
+  display: block;
+}
+
+div#information {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+
+div#detailedInformation {
+  width: 92.5%;
+  margin: 20px auto 500px;
+  display: block;
+}
+
+#wordDefinition:hover {
+  background-color: #efdcde;
+}
+
+#wordSynonymsTitle {
+  padding-bottom: 15px;
+}
+
+#wordSynonymList {
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+  display: flex;
+}
+
+li.singleSynonym {
+  text-align: center;
+  background-color: #e3b9d6;
+  margin: 10px 10px 5px;
+  padding: 15px 30px;
+  font-family: Merriweather, serif;
+}
+
+div.musicPlayer {
+  height: 100%;
+}
+
+div#musicSelectionArea {
+  width: 90%;
+  height: 55%;
+  background-color: #576570;
+  margin: 3% auto;
+}
+
+#cincopa_a34f92 {
+  padding-bottom: 40px;
+}
+
+/*# sourceMappingURL=index.83d9161e.css.map */
