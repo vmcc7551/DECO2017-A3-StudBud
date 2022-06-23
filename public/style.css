@@ -264,6 +264,7 @@ p.indexFooter {
 
 h1.taskManager {
   padding-top: 1%;
+
 }
 
 .column {
@@ -393,6 +394,8 @@ h1.taskManager {
 .show {
   padding: 10px 40px;
   margin: 20px auto;
+
+  margin-bottom: 100px;
 
   display: block;
   
@@ -680,10 +683,13 @@ input#searchInput {
   display: block;
   
   
+  color: white;
+  background-color: #555766;
+}
 
-  background-color: #45515a;
-
-  
+#searchButton:hover {
+  color: #e5e9eb;
+  background-color: rgb(32, 31, 31);
 }
 
 div#information {
