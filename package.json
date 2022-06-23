@@ -4,9 +4,10 @@
   "description": "Basic server using Node.js & Express.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "prestart": "parcel build ./public/index.html",
+    "dev": "parcel serve ./public/index.html"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vmcc7551/DECO2017-A3-StudBud.git"
@@ -19,15 +20,15 @@
   "dependencies": {
     "express": "^4.18.1"
   },
-
-
   "author": "vmcc7551",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/vmcc7551/DECO2017-A3-StudBud/issues"
   },
-  "homepage": "https://github.com/vmcc7551/DECO2017-A3-StudBud#readme"
-
+  "homepage": "https://github.com/vmcc7551/DECO2017-A3-StudBud#readme",
+  "devDependencies": {
+    "parcel": "^2.6.2"
+  }
 
   
 }
