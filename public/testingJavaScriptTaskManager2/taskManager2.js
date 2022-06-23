@@ -8,14 +8,17 @@ let taskSubmitButton = document.getElementById("taskSubmitButton")
 // Setting up variables for our HTML elements using DOM selection
 const form = document.getElementById("taskform");
 const button = document.querySelector("#taskform > button"); // Complex CSS query
-const tasklist = document.getElementById("tasklist");
+
+const tasklistUI = document.getElementById("tasklistUI");
+const tasklistUi = document.getElementById("tasklistUi");
+const tasklistuI = document.getElementById("tasklistuI");
+const tasklistui = document.getElementById("tasklistui");
 
 const taskInput = document.getElementById("taskInput");
 const dueDateInput = document.getElementById("dueDateInput");
 const completionTimeInput = document.getElementById("completionTimeInput");
 const estimatedTimeInput = document.getElementById("estimatedTimeInput");
-const urgencyInput = document.getElementById("urgencyInput");
-const importanceInput = document.getElementById("importanceInput");
+const urgencyImportanceInput = document.getElementById("urgencyImportanceInput");
 
 // Event listener for Button click
 // This could also be form.addEventListener("submit", function() {...} )
@@ -23,53 +26,56 @@ button.addEventListener("click", function(event) {
   event.preventDefault(); // Not as necessary for button, but needed for form submit
 
 //Getting all value inputs
-  let task = taskInput.value;
+  var task = taskInput.value;
 
-  let due = dueDateInput.value;
+  var due = dueDateInput.value;
 
-  let compTime = completionTimeInput.value;
+  var compTime = completionTimeInput.value;
 
-  let estTime = estimatedTimeInput.value;
+  var estTime = estimatedTimeInput.value;
 
-  let urgency = urgencyInput.value;
+  var urgencyImportance = urgencyImportanceInput.value;
 
-  let importance = importanceInput.value;
-
+  
   
 
   // Call the addTask() function using
-  addTask(task, due, compTime, estTime, urgency, importance);
+  addTask(task, due, compTime, estTime, urgencyImportance);
 
   // Log out the newly populated taskList everytime the button has been pressed
   console.log(taskList);
 })
 
-// Create an empty array to store our tasks
+// Create empty arrays to store our tasks
 var taskList = [];
 
-function addTask([taskDescription], [dueDate], [completionTime], [estimatedTime], urgencyRating, importanceRating) {
+function addTask(taskDescription, dueDate, completionTime, estimatedTime, 
+  urgencyImportanceRating) {
   let task = {
     taskDescription,
     dueDate,
     completionTime,
     estimatedTime,
-    urgencyRating,
-    importanceRating
+    urgencyImportanceRating,
+
   };
 
+ 
+  
 /* FOR STYLING PURPOSES TEMPORARY
-function addTask(taskDescription, dueDate, completionTime, estimatedTime, urgencyRating, importanceRating) {
+function addTask(taskDescription, dueDate, completionTime, estimatedTime, urgencyImportanceRating) {
   let task = {
     taskDescription,
     dueDate,
     completionTime,
     estimatedTime,
-    urgencyRating,
-    importanceRating
+    urgencyImportanceRating,
+
   };*/
 
   // Add the task to our array of tasks
-  taskList.push(task);
+
+    taskList.push(task);
 
   // Separate the DOM manipulation from the object creation logic
   renderTask(task);
@@ -82,9 +88,9 @@ function renderTask(task) {
   let br = document.createElement("br");
 
     // Setup checkbox DOM elements
-    var completeCheckbox = document.createElement("input");
-    completeCheckbox.type = 'checkbox';
-    completeCheckbox.classList.add('newCompleteCheckbox');
+  var completeCheckbox = document.createElement("input");
+  completeCheckbox.type = 'checkbox';
+  completeCheckbox.classList.add('newCompleteCheckbox');
 
   var itemTaskDescription = document.createElement("li");
   itemTaskDescription.innerHTML = "<span></span> <label>" + task.taskDescription + "</label>";
@@ -103,7 +109,7 @@ function renderTask(task) {
   itemEstimatedTime.classList.add('newElement', 'newEstimatedTime');
 
   /*let itemUrgencyRating = document.createElement("li");
-  itemUrgencyRating.innerHTML = "<p>" + task.urgencyRating + "</p>";
+  itemUrgencyRating.innerHTML = "<p>" + task.urgencyImportanceRating + "</p>";
   itemUrgencyRating.classList.add('UrgencyRating');
 
   let itemImportanceRating = document.createElement("li");
@@ -122,24 +128,66 @@ function renderTask(task) {
 
 
  // Adds a delete button for each task block
- 
+
+
+    //console.log(urgencyImportanceInput.value);
   
+    
+    if (urgencyImportanceInput.value == "UI") {
+
+      tasklistUI.appendChild(completeCheckbox);
+      tasklistUI.appendChild(itemTaskDescription);
+      
+      tasklistUI.appendChild(itemDueDate);
+      tasklistUI.appendChild(itemCompletionTime);
+      tasklistUI.appendChild(delButton); 
+      tasklistUI.appendChild(itemEstimatedTime);
+
+      tasklistUI.appendChild(br);
+    }
+
+    if (urgencyImportanceInput.value == "Ui") {
+
+      tasklistUi.appendChild(completeCheckbox);
+      tasklistUi.appendChild(itemTaskDescription);
+      
+      tasklistUi.appendChild(itemDueDate);
+      tasklistUi.appendChild(itemCompletionTime);
+      tasklistUi.appendChild(delButton); 
+      tasklistUi.appendChild(itemEstimatedTime);
+
+      tasklistUi.appendChild(br);
+    }
+
+    if (urgencyImportanceInput.value == "uI") {
+      tasklistuI.appendChild(completeCheckbox);
+      tasklistuI.appendChild(itemTaskDescription);
+      
+      tasklistuI.appendChild(itemDueDate);
+      tasklistuI.appendChild(itemCompletionTime);
+      tasklistuI.appendChild(delButton); 
+      tasklistuI.appendChild(itemEstimatedTime);
+
+      tasklistuI.appendChild(br);
+    }
+
+    if (urgencyImportanceInput.value == "ui") {
+
+      tasklistui.appendChild(completeCheckbox);
+      tasklistui.appendChild(itemTaskDescription);
+      
+      tasklistui.appendChild(itemDueDate);
+      tasklistui.appendChild(itemCompletionTime);
+      tasklistui.appendChild(delButton); 
+      tasklistui.appendChild(itemEstimatedTime);
+
+      tasklistui.appendChild(br);
+    }
+    
+
+
+
   
-  tasklist.appendChild(completeCheckbox);
-  tasklist.appendChild(itemTaskDescription);
-  
-  tasklist.appendChild(itemDueDate);
-  tasklist.appendChild(itemCompletionTime);
-  tasklist.appendChild(delButton); 
-  tasklist.appendChild(itemEstimatedTime);
-
-  tasklist.appendChild(br);
-  /*tasklist.appendChild(itemUrgencyRating);
-  tasklist.appendChild(itemImportanceRating);*/
-
-  //tasklist.appendChild(br);
-
-
     //delete taskInput.itemTaskDescription;
 
 
@@ -151,17 +199,57 @@ function renderTask(task) {
 
      // Remove the task item from the page when button clicked
     function removeTask() {
-      console.log("hi");
       
-      tasklist.removeChild(completeCheckbox);
-      tasklist.removeChild(itemTaskDescription);
+      if (urgencyImportanceInput.value == "UI") {
 
-      tasklist.removeChild(itemDueDate);
-      tasklist.removeChild(itemCompletionTime);
-      tasklist.removeChild(delButton); 
-      tasklist.removeChild(itemEstimatedTime);
-
-      tasklist.removeChild(br);
+        tasklistUI.removeChild(completeCheckbox);
+        tasklistUI.removeChild(itemTaskDescription);
+        
+        tasklistUI.removeChild(itemDueDate);
+        tasklistUI.removeChild(itemCompletionTime);
+        tasklistUI.removeChild(delButton); 
+        tasklistUI.removeChild(itemEstimatedTime);
+  
+        tasklistUI.removeChild(br);
+      }
+  
+      if (urgencyImportanceInput.value == "Ui") {
+  
+        tasklistUi.removeChild(completeCheckbox);
+        tasklistUi.removeChild(itemTaskDescription);
+        
+        tasklistUi.removeChild(itemDueDate);
+        tasklistUi.removeChild(itemCompletionTime);
+        tasklistUi.removeChild(delButton); 
+        tasklistUi.removeChild(itemEstimatedTime);
+  
+        tasklistUi.removeChild(br);
+      }
+  
+      if (urgencyImportanceInput.value == "uI") {
+        tasklistuI.removeChild(completeCheckbox);
+        tasklistuI.removeChild(itemTaskDescription);
+        
+        tasklistuI.removeChild(itemDueDate);
+        tasklistuI.removeChild(itemCompletionTime);
+        tasklistuI.removeChild(delButton); 
+        tasklistuI.removeChild(itemEstimatedTime);
+  
+        tasklistuI.removeChild(br);
+      }
+  
+      if (urgencyImportanceInput.value == "ui") {
+  
+        tasklistui.removeChild(completeCheckbox);
+        tasklistui.removeChild(itemTaskDescription);
+        
+        tasklistui.removeChild(itemDueDate);
+        tasklistui.removeChild(itemCompletionTime);
+        tasklistui.removeChild(delButton); 
+        tasklistui.removeChild(itemEstimatedTime);
+  
+        tasklistui.removeChild(br);
+      }
 
     }
     // Because we used 'let' to define the item, this will always delete the right element

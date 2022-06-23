@@ -19,14 +19,18 @@
    
 
     <div class="column">
-      <p class="important+urgent columnTitle">Important and Urgent Tasks</p>
-      <p class="-important+urgent columnTitle">Urgent but Not Important Tasks</p>
-      <p class="important-urgent columnTitle">Important but Not Urgent Tasks</p>
-      <p class="-important-urgent columnTitle">Neither Urgent nor Important Tasks</p>
-  
 
-      <ul id="tasklist">
-      </ul>
+      <p class="important+urgent columnTitle">Important and Urgent Tasks</p>
+      <ul id="tasklistUI"></ul>
+
+      <p class="-important+urgent columnTitle">Urgent but Not Important Tasks</p>
+      <ul id="tasklistUi"></ul>
+
+      <p class="important-urgent columnTitle">Important but Not Urgent Tasks</p>
+      <ul id="tasklistuI"></ul>
+
+      <p class="-important-urgent columnTitle">Neither Urgent nor Important Tasks</p>
+      <ul id="tasklistui"></ul>
       
     </div>
 
@@ -63,18 +67,12 @@
         <!-- Priority -->
         <br>
     
-        <label for="urgency" id="urgencyLabel">Task Urgency:</label>
-        <select name="urgency" id="urgencyInput">
-          <option value="Urgent">Urgent</option>
-          <option value="NotUrgent">Not Urgent</option>
-        </select>
-    
-        <br>
-
-        <label for="importance" id="importanceLabel">Task Importance:</label>
-        <select name="importance" id="importanceInput">
-          <option value="Important">Important</option>
-          <option value="NotImportant">Not Important</option>
+        <label for="urgencyImportance" id="urgencyImportanceLabel">Task Priority:</label>
+        <select name="urgencyImportance" id="urgencyImportanceInput">
+          <option value="UI">Urgent and Important</option>
+          <option value="Ui">Urgent but Not Important</option>
+          <option value="uI">Not Urgent but Important</option>
+          <option value="ui">Not Urgent and Not Important</option>
         </select>
     
         <br>
